@@ -75,14 +75,23 @@ WSGI_APPLICATION = 'myweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql', #设置为mysql数据库
+        'NAME': 'myweb',  #mysql数据库名
+        'USER': 'root',  #mysql用户名，留空则默认为当前linux用户名
+        'PASSWORD': 'mysql',   #mysql密码
+        'HOST': '10.3.216.127',  #留空默认为localhost
+        'PORT': '',  #留空默认为3306端口
     }
 }
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
