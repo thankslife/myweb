@@ -1,7 +1,7 @@
 from myweb.wsgi import *
 from  shows.models import Column,Article
 def main():
-	columns_urls=[
+	columns_urls=[ 
 		('体育新闻','sports'),
 		('社会新闻','society'),
 		('科技新闻','tech'),
